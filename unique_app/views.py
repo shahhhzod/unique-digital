@@ -2,6 +2,8 @@ from django.shortcuts import get_object_or_404, render, redirect
 from .models import Post, Category, PortfolioItem
 from .forms import InquiryForm
 from django.http import HttpResponse
+from django.conf import settings
+from decouple import config
 from django.utils.translation import gettext as _
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import requests
@@ -73,32 +75,6 @@ def send_telegram_message(message, document=None):
 
     return response.json()
 
-def inquiry_view(request):
-    if request.method == 'POST':
-        form = InquiryForm(request.POST, request.FILES)
-        if form.is_valid():
-            inquiry = form.save()
-
-            message = f"""
-            🔔 Новая заявка от {inquiry.full_name}!
-            📞 Телефон: {inquiry.phone}
-            📧 Email: {inquiry.email}
-            ⚙️ Тип проекта: {inquiry.project_type}
-            🔫 Описание: {inquiry.description}
-            """
-
-            send_telegram_message(message)
-
-            if 'file' in request.FILES:
-                document = request.FILES['file']
-                send_telegram_message("Вам отправлен файл:", document)
-
-            return HttpResponse('Заявка отправлена успешно!')
-        else:
-            return render(request, 'unique_app/inquiry_form.html', {'form': form})
-    else:
-        form = InquiryForm()
-    return render(request, 'unique_app/inquiry_form.html', {'form': form})
 
 def web_development(request):
     return render(request, 'unique_app/web_development.html')
@@ -134,8 +110,23 @@ def inquiry_view(request):
     if request.method == 'POST':
         form = InquiryForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            inquiry = form.save()
+            message = f"""
+            🔔 Новая заявка от {inquiry.full_name}!
+            📞 Телефон: {inquiry.phone}
+            📧 Email: {inquiry.email}
+            ⚙️ Тип проекта: {inquiry.project_type}
+            🔫 Описание: {inquiry.description}
+            """
+
+            send_telegram_message(message)
+
+            if 'file' in request.FILES:
+                document = request.FILES['file']
+                send_telegram_message("Вам отправлен файл:", document)
+
             return redirect('success_url')  # Редирект или сообщение об успехе
     else:
         form = InquiryForm()
     return render(request, 'unique_app/inquiry_form.html', {'form': form})
+
