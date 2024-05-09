@@ -23,9 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = config('DJANGO_SECRET_KEY')
-TELEGRAM_TOKEN = config('TELEGRAM_TOKEN')
-TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
+SECRET_KEY = ('django-insecure-&pui59hc0&!tbj*cebvrl(^)yqwq691xu#k(nmf&d6$@%a$g1v')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
