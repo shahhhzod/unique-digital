@@ -15,6 +15,7 @@ def home(request):
     portfolio_items = PortfolioItem.objects.all()
     return render(request, 'unique_app/home.html', {'portfolio_items': portfolio_items})
 
+
 def targeting_page(request):
     return render(request, 'unique_app/targeting.html')
 
@@ -57,8 +58,8 @@ def post_list_by_category(request, category_slug):
 
 
 def send_telegram_message(message, document=None):
-    token = '6375356762:AAE8rX-SMhnncLWeQosJWU2lDjLRo9Taab0'
-    chat_id = '-1002129953275'
+    token = config('TELEGRAM_TOKEN')
+    chat_id = config('TELEGRAM_CHAT_ID')
 
     if document:
         url = f'https://api.telegram.org/bot{token}/sendDocument'
