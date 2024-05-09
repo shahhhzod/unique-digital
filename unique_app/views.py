@@ -57,8 +57,8 @@ def post_list_by_category(request, category_slug):
 
 
 def send_telegram_message(message, document=None):
-    token = config('6375356762:AAE8rX-SMhnncLWeQosJWU2lDjLRo9Taab0')
-    chat_id = config('-1002129953275')
+    token = '6375356762:AAE8rX-SMhnncLWeQosJWU2lDjLRo9Taab0'
+    chat_id = '-1002129953275'
 
     if document:
         url = f'https://api.telegram.org/bot{token}/sendDocument'
