@@ -1,0 +1,89 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Веб-аналитика — это процесс сбора и анализа данных. веб-сайта или приложения.</h1>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">НАПРАВЛЕНИЯ И ИНСТРУМЕНТЫ</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+
+                  <!-- Блок только для мобильных устройств -->
+                  <div class="timeline-mobile">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Аналитика источников трафика</h3>
+                            <p>Используем популярные и бесплатные инструменты: Google Analytics, Google Tag Manager, Facebook Pixel.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Аналитика сайта, приложения и продукта</h3>
+                            <p>Кроме бесплатных инструментов для продуктовой и мобильной аналитики используем Kissmetrics, Intercom, Amplitude.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Визуализация, Business Intelligence и управленческая отчетность</h3>
+                            <p>Google Spreadsheets, Data Studio, OWOX BI, Microsoft Power BI, SQL.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>A/B тестирование и оптимизация конверсии (CRO)</h3>
+                            <p>Тесты проводим с помощью Google Optimize, Google Content Experiments.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Аналитика источников трафика</h3>
+                            <p>Используем популярные и бесплатные инструменты: Google Analytics, Google Tag Manager, Facebook Pixel.</p>
+                        </div>
+            
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Аналитика сайта, приложения и продукта</h3>
+                            <p>Кроме бесплатных инструментов для продуктовой и мобильной аналитики используем Kissmetrics, Intercom, Amplitude.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Визуализация, Business Intelligence и управленческая отчетность</h3>
+                            <p>Google Spreadsheets, Data Studio, OWOX BI, Microsoft Power BI, SQL.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>A/B тестирование и оптимизация конверсии (CRO)</h3>
+                            <p>Тесты проводим с помощью Google Optimize, Google Content Experiments.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Оставьте заявку, чтобы обсудить проект</h2>
+            <p class="lead mb-4">Начнем с обсуждения Вашей задачи</p>
+            <a href="{% url 'inquiry' %}">
+                <button class="btn btn-dark btn-lg">Отправить заявку</button>
+            </a>
+        </div>
+    </section>
+</section>
+{% endblock %}

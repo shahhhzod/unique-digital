@@ -1,0 +1,37 @@
+{% extends "unique_app/base.html" %}
+
+{% block content %}
+<section class="order_section">
+  <div class="container py-5">
+    <div class="row">
+        <div class="col-md-6">
+            <h2 class="text-white">Оставьте заявку, чтобы обсудить проект</h2><br>  
+            <p><a class="text-white text-decoration-none" href="mailto:info@unique-agency.tj">info@unique-agency.tj</a><br><a class="text-white text-decoration-none" href="tel:992985311006">+992 985 31 1006</a></p>
+            <p><strong>Для сотрудничества</strong><br><a class="text-white text-decoration-none" href="mailto:salom@unique-agency.tj">salom@unique-agency.tj</a></p>
+            <p>
+              <div class="icon__social__order">
+                <a href="#" class="me-2"><i class="fab fa-facebook-f"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-instagram"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" class="me-2"><i class="fab fa-telegram"></i></a>
+              </div>
+            </p>
+        </div>
+        <div class="col-md-6">
+            <form  method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+             {% for field in form %}
+            <div class="mb-3">
+            {{ field.errors }}
+            {{ field }}
+            </div>
+            {% endfor %}
+                <button type="submit" class="btn-order-form">Отправить</button><br><br>
+                <small class="text-white">Нажав на кнопку, соглашаюсь<br> на обработку персональных данных</small>
+            </form>
+        </div>
+        </div>
+        </div>
+</section>
+{% endblock %}
+

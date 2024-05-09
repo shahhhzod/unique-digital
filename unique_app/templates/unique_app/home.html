@@ -1,0 +1,414 @@
+{% extends 'unique_app/base.html' %}
+
+{% block title %}Unique - Главная страница{% endblock %}
+
+{% load static %}
+
+
+{% block content %}
+
+<!-- Main Hero -->
+
+<div class="container-fluid p-0">
+    <div class="main-hero">
+      <!-- Текст и кнопки -->
+      <div class="content-hero">
+      <p>Unique - диджитал агентство</p>
+      <h1>Ваш успех - наше</h1> 
+      <h1><span class="kurale-regular">уникальное</span> решение!</h1>
+      <a href="{% url 'inquiry' %}" class="button_hero">Заказать проект или услугу</a>
+      </div> 
+      <!-- Генерируем квадратики с помощью JavaScript -->
+    </div>
+  </div>
+
+
+  <!-- About US -->
+  <section class="team-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 image-block">
+          <img src="{% static 'images/team.svg' %}" alt="team">
+        </div>
+        <div class="col-md-6 content-block">
+          <div class="subtitle">немного о нас</div>
+          <div class="title">МОЛОДАЯ И ТАЛАНТЛИВАЯ КОМАНДА, ВЛЮБЛЕННАЯ В СВОЁ ДЕЛО.</div>
+          <div class="decorative-line"></div>
+          <div class="text-block">Мы специализируемся на графическом и UI/UX<br> дизайне, SMM-продвижении, таргетированной<br> рекламе, профессиональной фотосъемке, создании<br> сайтов и веб-решений, а также в автоматизации и<br> разработке ботов.</div>
+          <div class="text-block">Наша философия основана на постоянном<br> развитии и стремлении к совершенству.</div>
+          <div class="text-block"><span>Unique</span> - диджитал агентство, Ваше комплексное<br> решение <span>🙌</span></div>
+        </div>
+      </div>
+    </div>    
+</section>
+
+<!-- Number Stats -->
+
+<div class="container stats-section">
+    <div class="row">
+      <div class="col stat-item">
+        <div class="stat-number">30+</div>
+        <span class="stat-description">выполненных<br> проектов</span>
+      </div>
+      <div class="col stat-item">
+        <div class="stat-number">50+</div>
+        <span class="stat-description">довольных<br>клиентов</span>
+      </div>
+      <div class="col stat-item">
+        <div class="stat-number">2+</div>
+        <span class="stat-description">года на<br> рынке</span>
+      </div>
+    </div>
+  </div>
+
+<!-- Title Block -->
+  
+<div class="container services-section">
+    <div class="row">
+      <div class="col">
+        <div class="services-header">наши услуги</div>
+        <div class="services-decorative-line"></div>
+        <div class="services-subheader">Что мы предлагаем?</div>
+      </div>
+    </div>
+  </div>
+
+
+  <div class="container py-5">
+    <div class="row">
+      <!-- Карточка услуги -->
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/design.svg' %}" alt="design"></div>
+          <div style="font-size: 26px;" class="service-title">Дизайн</div>
+          <div class="service-description">
+          Разработка лого/брендинга<br>
+          Разработка полиграфии<br>
+          Разработка атрибутики<br>
+          UI / UX Дизайн<br>
+          Графический дизайн<br>
+          Индивидуальные задачи<br>
+          </div>
+          <a href="{% url 'inquiry' %}" class="btn btn-link service-link">Заказать <img class="service-arrow" src="{% static 'images/icons/arrow.svg' %}" alt="arrow"></a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/web.svg' %}" alt="web"></div>
+          <div style="font-size: 26px;" class="service-title">разработка сайтов</div>
+          <div class="service-description">
+          Landing Page<br>
+          Корпоративный сайт<br>
+          Сайт-каталог<br>
+          Интернет-магазин<br>
+          Индивидуальный проект<br>
+          </div>
+          <a href="{% url 'inquiry' %}" class="btn btn-link service-link">Заказать <img class="service-arrow" src="{% static 'images/icons/arrow.svg' %}" alt="arrow"></a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/smm.svg' %}" alt="smm"></div>
+          <div style="font-size: 26px;" class="service-title">SMM Продвижение</div>
+          <div class="service-description">
+          Ведение Facebook/Instagram<br>
+          Создание маркетинговой стратегии<br>
+          Разработка рубрикатора/контент-плана<br>
+          Создание постов и креативов<br>
+          Администрация аккаунта<br>
+          </div>
+          <a href="{% url 'inquiry' %}" class="btn btn-link service-link">Заказать <img class="service-arrow" src="{% static 'images/icons/arrow.svg' %}" alt="arrow"></a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/ads.svg' %}" alt="ads"></div>
+          <div style="font-size: 26px;" class="service-title">
+  Таргетированная реклама</div>
+          <div class="service-description"><br>
+          Поисковая реклама Google<br>
+  Контекстно-медийная реклама<br>
+  Реклама в YouTube<br>
+  Таргетированная реклама<br>
+  в Facebook/Instagram<br>
+  Разработка рекламных<br>
+  креативов
+          </div>
+          <a href="{% url 'inquiry' %}" class="btn btn-link service-link">Заказать <img class="service-arrow" src="{% static 'images/icons/arrow.svg' %}" alt="arrow"></a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/seo.svg' %}" alt="seo"></div>
+          <div style="font-size: 26px;" class="service-title">SEO Оптимизация</div>
+          <div class="service-description">
+          Предварительная работа: аудит и анализ<br>
+  Определение семантического ядра<br>
+  Техническая оптимизация<br>
+  Контентная оптимизация<br>
+  Внешняя оптимизация<br>
+          </div>
+          <a href="{% url 'inquiry' %}" class="btn btn-link service-link">Заказать <img class="service-arrow" src="{% static 'images/icons/arrow.svg' %}" alt="arrow"></a>
+        </div>
+      </div>
+  
+      <div class="col-md-4 mb-4">
+        <div class="service-card">
+          <div class="service-icon"><img src="{% static 'images/icons/rec.svg' %}" alt="rec"></div>
+          <div class="service-title-soon">Фото и
+  видеосъемка</div>
+          <a class="btn btn-link service-link-soon">Coming soon...</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="cooperation text-lg-start">
+    <div class="container py-4">
+      <div class="cooperation-hero">
+        <h2>Есть предложение?</h2>
+        <p class="display-4"><a class="display-4 text-decoration-none" href="mailto:salom@unique-agency.tj">salom@unique-agency.tj</a></p>
+      </div>
+    </div>
+  </section>  
+
+<!-- Title Block -->
+<div class="container services-section">
+    <div class="row">
+      <div class="col">
+        <div class="services-header">ПОРТФОЛИО</div>
+        <div class="services-decorative-line"></div>
+        <div class="services-subheader">Наши недавние проекты</div>
+      </div>
+    </div>
+  </div>
+</div>
+
+  <section class="portfolio">
+    <div class="container">
+        <div class="row">
+            {% for item in portfolio_items %}
+                <div class="col-lg-4 col-md-6 mb-4">
+                    <div class="portfolio-item">
+                      <a href="{% url 'portfolio-detail' pk=item.pk %}" class="portfolio-link">
+                        <img src="{{ item.image.url }}" class="img-fluid" alt="{{ item.title }}">
+                        <div class="portfolio-overlay">
+                            <h3>{{ item.title }}</h3>
+                        </div>
+                      </a>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+
+
+    <!-- Title Block -->
+    <div class="container reviews">
+        <div class="row align-items-center">
+          <!-- Левая колонка для текста и декораций -->
+          <div class="col-md-6">
+            <p class="lead">Отзывы</p>
+            <h2>Что говорят<br> о нас?</h2>
+            <div class="decorative-image">
+              <img src="{% static 'images/vector/element_with_heart.svg' %}" alt="heart">
+            </div>
+          </div>
+    <!-- Правая колонка для карусели -->
+    <div class="col-md-6">
+        <div id="testimonialCarousel" class="carousel slide" data-bs-ride="carousel">
+          <div class="carousel-inner">
+            <div class="carousel-item active">
+               <div class="blockquote">
+                <p class="mb-0">
+                Агентство, которое разработало для нас айдентику, профессионалы своего дела. Они создали для нас уникальный бренд, который помог нам выделиться на рынке. 
+                Мы ценим их профессионализм и рекомендуем агентство всем, кто ищет надежного партнера для своих проектов.
+                </p>
+                <div class="decoration-line"></div>
+                <footer class="blockquote-footer-carousel d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <img src="assets/images/reviews/warshan.webp" alt="Варшан Каххоров" class="testimonial-author-image me-3">
+      <div>
+        <div><strong>Варшан Каххоров</strong></div>
+        <div class="who_reviev">руководитель Washan store</div>
+      </div>
+    </div>
+    <div class="control-button d-flex">
+      <a href="#testimonialCarousel"  class="btn-prev" role="button" data-bs-slide="prev"> 
+          <button><i class="bi bi-arrow-left-short"></i></button>
+        <span class="visually-hidden">Предыдущий</span>
+      </a>
+      <a href="#testimonialCarousel" class="btn-next" role="button" data-bs-slide="next">
+        <button><i class="bi bi-arrow-right-short"></i></button>
+        <span class="visually-hidden">Следующий</span>
+      </a>
+    </div>
+  </footer>
+              </div>
+            </div>
+  
+            <div class="carousel-item">
+              <div class="blockquote">
+                <p class="mb-0">
+                Агентство, которое разработало для нас айдентику, профессионалы своего дела. Они создали для нас уникальный бренд, который помог нам выделиться на рынке. 
+                Мы ценим их профессионализм и рекомендуем агентство всем, кто ищет надежного партнера для своих проектов.
+                </p>
+                <div class="decoration-line"></div>
+                <footer class="blockquote-footer-carousel d-flex align-items-center justify-content-between">
+    <div class="d-flex align-items-center">
+      <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1229892983-square.jpg" alt="Варшан Каххоров" class="testimonial-author-image me-3">
+      <div>
+        <div><strong>Илон Маск</strong></div>
+        <div class="who_reviev">CEO Tesla</div>
+      </div>
+    </div>
+    <div class="control-button d-flex">
+      <a href="#testimonialCarousel" class="btn-prev" role="button" data-bs-slide="prev">
+          <button><i class="bi bi-arrow-left-short"></i></button>
+        <span class="visually-hidden">Предыдущий</span>
+      </a>
+      <a href="#testimonialCarousel" class="btn-next" role="button" data-bs-slide="next">
+        <button><i class="bi bi-arrow-right-short"></i></button>
+        <span class="visually-hidden">Следующий</span>
+      </a>
+    </div>
+  </footer>
+  </div>
+  </div>
+            <!-- Добавьте больше .carousel-item с отзывами здесь -->
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+  <section class="partner">
+    <div class="container">
+      <div class="col">
+        <div class="services-header">ОСОБАЯ БЛАГОДАРНОСТЬ</div>
+        <div class="services-decorative-line"></div>
+        <div class="services-subheader text-white">ВСЕМ НАШИМ партнерам</div>
+      </div>
+      <div class="row mt-5">
+        <!-- Логотипы партнеров -->
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/Multikid logo.svg' %}" alt="Multikid">
+            </div>
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/logo aseel.svg' %}" alt="Assel">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/Logo MaxPrint.svg' %}" alt="MaxPrint">
+            </div>
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/Logo Warshan.svg' %}" alt="Warshan">
+            </div>
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/Sado logo.svg' %}" alt="Sado">
+            </div>
+            <div class="col-md-3 text-center">
+              <img src="{% static 'images/partner/Logo Hc.svg' %}" alt="HC Logo">
+            </div>
+          </div>
+        </div>
+        <!-- Блок благодарности -->
+      </div>
+    </div>
+    
+  </section>
+
+
+  <!-- FAQ -->
+  <section class="faq">
+    <div class="container my-5">
+      <div class="row">
+        <div class="col-lg-6">
+          <!-- Текст слева -->
+          <div class="mb-4">
+            <h2 class="faq-header">FAQ</h2>
+            <p class="faq-body">Часто задаваемые<br>
+              вопросы:</p>
+              <div class="faq_symbol">
+                <img src="{% static 'images/icons/FAQ_symbol.svg' %}" alt="faq_symbol">
+              </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <!-- FAQ справа -->
+          <div class="accordion" id="faqAccordion">
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingOne">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                  Каковы сроки выполнения проектов?
+                  <span class="accordion-icon"></span> <!-- Псевдо-элемент для иконки -->
+                </button>
+              </h2>
+              <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Сроки выполнения проектов зависят от их сложности и объема. Мы стремимся к тому, чтобы каждый проект был завершен в срок и соответствовал вашим ожиданиям. Поэтому мы устанавливаем реалистичные сроки нашей работы и придерживаемся их, чтобы обеспечить качественный результат.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingTwo">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                  Как можно определить бюджет на разработку сайта?
+                </button>
+              </h2>
+              <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Используйте наш удобный <a style="text-decoration: underline;" onclick="startCalculation()">калькулятор</a> для быстрого и точного расчета стоимости разработки вашего веб-сайта.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingThree">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                  Какие основные этапы разработки сайта?
+                </button>
+              </h2>
+              <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Основные этапы включают планирование, дизайн, разработку, тестирование и запуск.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header" id="headingFour">
+                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                  Какие преимущества предоставляет контекстная реклама?
+                </button>
+              </h2>
+              <div id="collapseFour" class="accordion-collapse collapse" aria-labelledby="headingFour" data-bs-parent="#faqAccordion">
+                <div class="accordion-body">
+                  Контекстная реклама позволяет точно таргетировать рекламные сообщения на вашу целевую аудиторию.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section text-white py-5">
+    <div class="container">
+      <h2>Остались вопросы?</h2>
+      <a href="#" class="btn btn-download mt-3"><i class="bi bi-paperclip bg-white"></i> Скачать бриф</a>
+      <h1 class="display-4 mt-4"><a class="display-4 text-decoration-none" href="{% url 'inquiry' %}">Напишите нам <img src="{% static 'images/icons/arrow_contact.svg' %}" alt=""></a></h1>
+      <div class="contact-divider mx-auto mt-3"></div>
+    </div>
+  </section>  
+{% endblock %}

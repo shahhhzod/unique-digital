@@ -1,0 +1,87 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Оптимизируем сайт, улучшаем дизайн и контент, чтобы привлечь рентабельных клиентов из поисковых систем.</h1>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">Ориентируемся на продажи</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                  <!-- Блок только для мобильных устройств -->
+                  <div class="timeline-mobile">
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Релевантные запросы</h3>
+                            <p>Выводим сайт в топ только по тем поисковым запросам, которые приводят покупателей. Мы не будем тратить ваш бюджет на нецелевых посетителей сайта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Коммерческие факторы</h3>
+                            <p>Улучшаем дизайн и интерфейс, за счет чего повышаем сайт в позициях поисковой выдачи, увеличиваем конверсию и приводим больше клиентов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Рентабельность</h3>
+                            <p>Если в вашей нише SEO-продвижение может оказаться нерентабельным, мы предупредим об этом во время подготовки коммерческого предложения.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item">
+                        <div class="timeline-content">
+                            <h3>Контекстная реклама</h3>
+                            <p>Анализируем эффективность ключевых запросов совместно со специалистами по контекстной рекламе и убираем из семантического ядра те, которые не приводят к увеличению продаж.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Релевантные запросы</h3>
+                            <p>Выводим сайт в топ только по тем поисковым запросам, которые приводят покупателей. Мы не будем тратить ваш бюджет на нецелевых посетителей сайта.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Коммерческие факторы</h3>
+                            <p>Улучшаем дизайн и интерфейс, за счет чего повышаем сайт в позициях поисковой выдачи, увеличиваем конверсию и приводим больше клиентов.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Рентабельность</h3>
+                            <p>Если в вашей нише SEO-продвижение может оказаться нерентабельным, мы предупредим об этом во время подготовки коммерческого предложения.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Контекстная реклама</h3>
+                            <p>Анализируем эффективность ключевых запросов совместно со специалистами по контекстной рекламе и убираем из семантического ядра те, которые не приводят к увеличению продаж.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Оставьте заявку, чтобы обсудить проект</h2>
+            <p class="lead mb-4">Начнем с обсуждения Вашей задачи</p>
+            <a href="{% url 'inquiry' %}">
+                <button class="btn btn-dark btn-lg">Отправить заявку</button>
+            </a>
+        </div>
+    </section>
+</section>
+{% endblock %}

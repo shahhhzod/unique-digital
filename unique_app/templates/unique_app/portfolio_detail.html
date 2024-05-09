@@ -1,0 +1,15 @@
+<!-- portfolio_detail.html -->
+
+{% extends 'unique_app/base.html' %}
+
+{% block content %}
+<section class="post_detail">
+    <div class="container mt-5">
+        <div class="photo text-center">
+            <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-50">
+        </div>
+        <h1 class="text-white text-center mt-3">{{ item.title }}</h1>
+        <p class="text-white text-left mt-3">{{ item.description }}</p><br><br><br>
+    </div>
+</section>
+{% endblock %}

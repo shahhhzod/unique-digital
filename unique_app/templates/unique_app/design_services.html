@@ -1,0 +1,98 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Разрабатываем фирменный стиль бренда, которые нравятся аудитории, легко запоминаются и формируют ассоциативные образы.</h1>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">Как мы создаем<br>из бизнеса бренд</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Определяем цель</h3>
+                            <p>Проводим брифинг, узнаем пожелания и ограничения, определяем задачу и общее направление.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Анализируем</h3>
+                            <p>Изучаем компанию и продукт, конкурентов, аудиторию и зарубежный опыт. Определяем наиболее важные для оформления каналы коммуникации.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Создаем логотип и фирменный стиль</h3>
+                            <p>Разрабатываем знак и элементы фирменного стиля, оформляем выбранные каналы коммуникации. Создаем гайдлайн.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Дизайн-система</h3>
+                            <p>Сохраняем узнаваемость в каждой точке касания — сайт, социальные сети, реклама, вывеска, носители.   </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4 text-white">Используем лучшие дизайнерские программы</h2>
+        <div class="d-flex justify-content-center mb-3 filter-btns">
+            <button class="btn btn-outline-secondary active" onclick="filterTech('all')">Все</button>
+            <button class="btn btn-outline-secondary" onclick="filterTech('frontend')">Фото</button>
+            <button class="btn btn-outline-secondary" onclick="filterTech('backend')">Видео</button>
+            <!-- <button class="btn btn-outline-secondary" onclick="filterTech('integration')"></button> -->
+        </div>
+        <div class="row text-center py-5">
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/Adobe_Photoshop_CC.svg' %}" alt="Photoshop" class="tech-logo">
+                <h4>Adobe Photoshop</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/Adobe Illustrator CC.svg' %}" alt="Illustrator" class="tech-logo">
+                <h4>Adobe<br>Illustrator</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/coreldraw-gs.svg' %}" alt="Coreldraw" class="tech-logo">
+                <h4>CorelDRAW</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/Figma-logo.svg' %}" alt="Figma" class="tech-logo">
+                <h4>Figma</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/Adobe_Premiere_Pro_CC_icon.svg' %}" alt="premier" class="tech-logo">
+                <h4>Adobe Premiere PRO</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/Adobe_After_Effects_CC.svg' %}" alt="aftereffects" class="tech-logo">
+                <h4>Adobe After Effects</h4>
+            </div>
+        </div>
+    </div>
+
+
+
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Оставьте заявку, чтобы обсудить проект</h2>
+            <p class="lead mb-4">Начнем с обсуждения Вашей задачи</p>
+            <a href="{% url 'inquiry' %}">
+                <button class="btn btn-dark btn-lg">Отправить заявку</button>
+            </a>
+        </div>
+    </section>
+</section>
+{% endblock %}

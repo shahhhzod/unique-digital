@@ -1,0 +1,82 @@
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container rounded text-white py-5 mb-4">
+        <h2 class="text-center py-3 text-white">Калькулятор стоимости сайта</h2>
+        <p class="text-center">Калькулятор позволяет выяснить стоимость разработки сайта, не обращаясь для этого к нашему менеджеру: 5 несложных шагов и вы сможете узнать стоимость разработки своего веб-ресурса. </p>
+    
+        <div id="step1" class="step-container">
+            <h3 class="bg-dark p-2 rounded">Шаг 1: Тип сайта</h3>
+            <p>Определитесь с типом сайта. Сильнее всего стоимость сайта зависит именно от данного выбора.</p>
+            <select id="type" class="form-select">
+                <option value="0">Выберите тип сайта</option>
+                <option value="1800">Одностраничный</option>
+                <option value="1450">Сайт-визитка</option>
+                <option value="2650">Многостраничный сайт</option>
+                <option value="4500">Интернет-магазин</option>
+                <option value="6500">Корпоративный сайт</option>
+            </select>
+            <button class="btn btn-dark mt-4" onclick="nextStep(2)">Далее</button>
+        </div>
+    
+        <div id="step2" class="step-container hidden">
+            <h3 class="bg-dark p-2 rounded">Шаг 2: Дизайн сайта</h3>
+            <select id="design" class="form-select">
+                <option value="0">Выберите дизайн</option>
+                <option value="1000">Шаблон</option>
+                <option value="2000">Уникальный</option>
+            </select>
+            <button class="btn btn-dark mt-4" onclick="nextStep(3)">Далее</button>
+        </div>
+    
+        <div id="step3" class="step-container hidden">
+            <h3 class="bg-dark p-2 rounded">Шаг 3: Дополнительные опции</h3>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="400" id="logo">
+                <label class="form-check-label" for="logo">Логотип</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="250" id="banner">
+                <label class="form-check-label" for="banner">Баннер</label>
+            </div>
+            <button class="btn btn-dark mt-4" onclick="nextStep(4)">Далее</button>
+        </div>
+    
+        <div id="step4" class="step-container hidden">
+            <h3 class="bg-dark p-2 rounded">Шаг 4: Функционал сайта</h3>
+            <!-- Добавьте здесь функции в зависимости от выбранного типа сайта -->
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="850" id="seo">
+                <label class="form-check-label" for="seo">SEO оптимизация</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="150" id="analytics">
+                <label class="form-check-label" for="analytics">Google Analytics</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="150" id="analytics">
+                <label class="form-check-label" for="analytics">Яндекс Метрика</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="750" id="multilingual">
+                <label class="form-check-label" for="multilingual">Мультиязычность / 3 языка</label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="1300" id="blog">
+                <label class="form-check-label" for="multilingual">Блог</label>
+            </div>
+            <button class="btn btn-dark mt-4" onclick="calculateTotal()">Рассчитать стоимость</button>
+
+            <div class="result mt-3">
+                <h4>Итоговая стоимость: <span id="total">0</span> сомони.</h4>
+            </div>
+        </div>
+    </div>
+
+    
+
+</section>
+{% endblock %}

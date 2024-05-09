@@ -1,0 +1,88 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Создаем сильный бренд с помощью взаимодействия с аудиторией в социальных сетях. Усиливаем интерес к вашему продукту — увеличиваем количество заявок и продаж из социальных сетей.</h1>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">Наш подход</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                
+                 <!-- Блок только для мобильных устройств -->
+            <div class="timeline-mobile">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Рекламные инструменты</h3>
+                        <p>Повышаем узнаваемость бренда с помощью промотирования контента. Создаем аудитории ретаргетинга, регулярную коммуникацию с аудиторией бренда.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Стратегия продвижения</h3>
+                        <p>Определяем цели продвижения, сроки, каналы коммуникации и способы общения с аудиторией. Анализируем результаты и корректируем стратегию.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Качественный контент</h3>
+                        <p>Ориентируемся на формирование репутации бренда: создаем экспертный образ с помощью полезного контента и высокого качества исполнения.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Аудитория бренда</h3>
+                            <p>Формируем аудиторию бренда для регулярной коммуникации. Сохраняем в списки ретаргетинга тех, кто взаимодействовал с компанией в социальных сетях, на сайте, потенциальных и текущих клиентов в базе CRM-системы.</p>
+                    </div>
+                </div>
+            </div>
+
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Рекламные инструменты</h3>
+                            <p>Повышаем узнаваемость бренда с помощью промотирования контента. Создаем аудитории ретаргетинга, регулярную коммуникацию с аудиторией бренда.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Стратегия продвижения</h3>
+                            <p>Определяем цели продвижения, сроки, каналы коммуникации и способы общения с аудиторией. Анализируем результаты и корректируем стратегию.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Качественный контент</h3>
+                            <p>Ориентируемся на формирование репутации бренда: создаем экспертный образ с помощью полезного контента и высокого качества исполнения.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Аудитория бренда</h3>
+                            <p>Формируем аудиторию бренда для регулярной коммуникации. Сохраняем в списки ретаргетинга тех, кто взаимодействовал с компанией в социальных сетях, на сайте, потенциальных и текущих клиентов в базе CRM-системы.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Оставьте заявку, чтобы обсудить проект</h2>
+            <p class="lead mb-4">Начнем с обсуждения Вашей задачи</p>
+            <a href="{% url 'inquiry' %}">
+                <button class="btn btn-dark btn-lg">Отправить заявку</button>
+            </a>
+        </div>
+    </section>
+</section>
+{% endblock %}

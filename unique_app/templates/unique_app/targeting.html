@@ -1,0 +1,60 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Увеличиваем продажи с помощью социальных сетей: создаем аудиторию бренда и формируем желание обратиться именно к вам.</h1>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">Стратегия</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Каналы коммуникации</h3>
+                            <p>На основе исследования определяем, где и каким образом взаимодействовать с целевой аудиторией.</p>
+                        </div>
+            
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Сегменты аудиторий</h3>
+                            <p>Собираем и сегментируем аудиторию. Сохраняем в списки ретаргетинга тех, кто проявил интерес к бренду.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Дизайн-концепции</h3>
+                            <p>Формируем единый образ бренда, который используем в будущих рекламных кампаниях.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Креативные посылы</h3>
+                            <p>На основе потребностей и болей аудитории формируем креативные сообщения, которые транслируем через баннеры и тексты.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Оставьте заявку, чтобы обсудить проект</h2>
+            <p class="lead mb-4">Начнем с обсуждения Вашей задачи</p>
+            <a href="{% url 'inquiry' %}">
+                <button class="btn btn-dark btn-lg">Отправить заявку</button>
+            </a>
+        </div>
+    </section>
+</section>
+{% endblock %}

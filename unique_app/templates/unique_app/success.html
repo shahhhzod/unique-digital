@@ -1,0 +1,25 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+{% load static %}
+
+
+{% block content %}
+<section class="success_section">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="p-5 text-center">
+                    <h1 class="display-4">
+                        <img src="{% static 'images/success.png' %}" width="200px" alt="success">
+                    </h1>
+                    <p class="lead text-white">Ваша заявка была успешно отправлена.</p>
+                    <p class="text-white">Спасибо за обращение к нам. Мы свяжемся с вами в ближайшее время.</p>
+                    <p class="lead">
+                        <a style="color: #FFD5A4;" class="btn btn-link text-center btn-lg" href="/" role="button">Вернуться на главную</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

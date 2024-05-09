@@ -1,0 +1,36 @@
+<!-- portfolio_list.html -->
+
+{% extends 'unique_app/base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="case-studies">
+
+    <div class="container">
+        <div class="row">
+          <div class="col">
+            <div class="services-header">наши кейсы</div>
+            <div class="services-decorative-line"></div>
+          </div>
+        </div>
+      </div>
+    
+
+    <div class="container py-5">
+        <div class="row">
+            {% for item in portfolio_items %}
+            <div class="col-md-4 mb-4">
+                <a href="{% url 'portfolio-detail' pk=item.pk %}" class="portfolio-link">
+                    <div class="card">
+                        <div class="position-relative">
+                            <img src="{{ item.image.url }}" class="card-img-top" alt="photo">
+                            <h5 class="card-title position-absolute bottom-0 start-50 translate-middle-x mb-4 text-white">{{ item.title }}</h5>
+                        </div>
+                    </div>
+                </a>
+            </div>            
+            {% endfor %}
+        </div>
+    </div>
+</section>
+{% endblock %}

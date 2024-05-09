@@ -1,0 +1,160 @@
+<!-- web_development.html -->
+{% extends "unique_app/base.html" %}
+
+{% load static %}
+
+{% block content %}
+<section class="services_base">
+    <div class="container py-5">
+        <h1 class="text-white mb-4">Разрабатываем сайты, которые создают сильный образ бренда</h1>
+        <h3 class="text-white">Удобные, легко масштабируемые и безопасные решения</h3>
+        <p class="text-secondary h5 mt-4 font-weight-normal">Для вас и ваших клиентов мы создадим быстрый и удобный сайт с адаптивным дизайном, надежный и стабильный в своей работе. Продуманная структура сайта и грамотный UX-дизайн поможет вам повысить конверсию и продажи, облегчит контакт с аудиторией, а также положительно повлияет на имидж компании.<br><br>Для ваших сотрудников — разработаем корпоративный портал, который упростит и автоматизирует рутинные задачи, сделает работу каждого специалиста удобной и прозрачной.</p>>
+    </div>
+
+    <div class="container py-3">
+        <div class="row justify-content-center">
+            <div class="col">
+                <h1 class="text-white text-center">РАЗРАБОТКА С НУЛЯ</h1>
+                <hr>
+            </div>
+            <div class="col-md-12">
+                
+                 <!-- Блок только для мобильных устройств -->
+            <div class="timeline-mobile">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Пиксель перфект</h3>
+                        <p>Верстаем дизайн и оживляем сайт через анимации и интерактивы элементов. Создаем функционал, усиливающий преимущества, и разрабатываем простое управление контентом. Сайт будет быстрый и удобный на любом устройстве.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Простое управление</h3>
+                        <p>Подбираем лучшую для проекта CMS из возможных или делаем собственную. Настраиваем функционал под рабочие задачи и обучаем персонал работе с системой.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Маркетинговый функционал</h3>
+                        <p>Программируем функционал для усиления конкурентных преимуществ. Например: удобный калькулятор, наглядно демонстрирующий выгоды; умные и персональные подборки; личный кабинет с системой лояльности и простым взаимодействием с компанией.</p>
+                    </div>
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3>Интеграция и поддержка</h3>
+                            <p>Интегрируем сайт с API-сервисами: онлайн-чаты, виджеты, доставки, оплаты, почтовые клиенты CRM и ERP-системы. Обеспечиваем техническую поддержку и дальнейшее развитие.</p>
+                    </div>
+                </div>
+            </div>
+                <div class="timeline">
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Пиксель перфект</h3>
+                            <p>Верстаем дизайн и оживляем сайт через анимации и интерактивы элементов. Создаем функционал, усиливающий преимущества, и разрабатываем простое управление контентом. Сайт будет быстрый и удобный на любом устройстве.</p>
+                        </div>
+            
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Простое управление</h3>
+                            <p>Подбираем лучшую для проекта CMS из возможных или делаем собственную. Настраиваем функционал под рабочие задачи и обучаем персонал работе с системой.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-right">
+                        <div class="timeline-content">
+                            <h3>Маркетинговый функционал</h3>
+                            <p>Программируем функционал для усиления конкурентных преимуществ. Например: удобный калькулятор, наглядно демонстрирующий выгоды; умные и персональные подборки; личный кабинет с системой лояльности и простым взаимодействием с компанией.</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item timeline-item-left">
+                        <div class="timeline-content">
+                            <h3>Интеграция и поддержка</h3>
+                            <p>Интегрируем сайт с API-сервисами: онлайн-чаты, виджеты, доставки, оплаты, почтовые клиенты CRM и ERP-системы. Обеспечиваем техническую поддержку и дальнейшее развитие.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container py-5">
+        <h2 class="text-center mb-4 text-white">CТЕК РАЗРАБОТКИ</h2>
+        <div class="d-flex justify-content-center mb-3 filter-btns">
+            <button class="btn btn-outline-secondary active" onclick="filterTech('all')">Все</button>
+            <button class="btn btn-outline-secondary" onclick="filterTech('frontend')">Frontend</button>
+            <button class="btn btn-outline-secondary" onclick="filterTech('backend')">Backend</button>
+            <button class="btn btn-outline-secondary" onclick="filterTech('integration')">Интеграции</button>
+        </div>
+        <div class="row text-center py-5">
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/react-icon.svg' %}" alt="react" class="tech-logo">
+                <h4>React</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/vue-icon.svg' %}" alt="VUE" class="tech-logo">
+                <h4>VUE</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/node-icon.svg' %}" alt="Node.js" class="tech-logo">
+                <h4>Node.js</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/ts-icon.svg' %}" alt="TypeScript" class="tech-logo">
+                <h4>TypeScript</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="integration">
+                <img src="{% static 'images/logo/rest-icon.svg' %}" alt="rest-api" class="tech-logo">
+                <h4>Rest API</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/postgres-icon.svg' %}" alt="Postgres" class="tech-logo">
+                <h4>Postgres</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/python-icon.svg' %}" alt="Python" class="tech-logo">
+                <h4>Python</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="frontend">
+                <img src="{% static 'images/logo/next-icon.svg' %}" alt="next" class="tech-logo">
+                <h4>Next JS</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/mongo-db-icon.svg' %}" alt="MongoDB" class="tech-logo">
+                <h4>MongoDB</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/kubernetes-icon.svg' %}" alt="kubernetes" class="tech-logo">
+                <h4>Kubernetes</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/mysql-icon.svg' %}" alt="mysql" class="tech-logo">
+                <h4>MySQL</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="integration">
+                <img src="{% static 'images/logo/json-icon.svg' %}" alt="json" class="tech-logo">
+                <h4>JSON</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/docker-icon.svg' %}" alt="docker" class="tech-logo">
+                <h4>Docker</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/laravel-icon.svg' %}" alt="Laravel" class="tech-logo">
+                <h4>Laravel</h4>
+            </div>
+            <div class="col-md-3 technology" data-category="backend">
+                <img src="{% static 'images/logo/gitlab-icon.svg' %}" alt="gitlab" class="tech-logo">
+                <h4>GitLab CI/CD</h4>
+            </div>
+        </div>
+    </div>
+
+    <section class="calculate-cost">
+        <div class="container text-center py-5">
+            <h2 class="mb-3">Рассчитайте стоимость своего сайта за 5 шагов</h2>
+            <p class="lead mb-4">Используйте наш удобный калькулятор для быстрого и точного расчета стоимости разработки вашего веб-сайта.</p>
+            <button class="btn btn-dark btn-lg" onclick="startCalculation()">Начать расчет</button>
+        </div>
+    </section>
+</section>
+{% endblock %}
