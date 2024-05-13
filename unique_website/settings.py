@@ -7,6 +7,7 @@ from decouple import config
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 
+
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/4.2/howto/deployment/checklist/
 
@@ -16,9 +17,9 @@ TELEGRAM_TOKEN = config('TELEGRAM_TOKEN')
 TELEGRAM_CHAT_ID = config('TELEGRAM_CHAT_ID')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
-ALLOWED_HOSTS = ['unique-agency.tj']
+ALLOWED_HOSTS = ['unique-agency.tj', '127.0.0.1']
 
 
 # Application definition
@@ -123,6 +124,9 @@ USE_L10N = True  # Включает локализацию форматов да
 # https://docs.djangoproject.com/en/4.2/howto/static-files/
 
 STATIC_URL = '/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, 'unique_app/static'),
+]
 STATIC_ROOT = '/var/www/unique/unique_app/static/'
 MEDIA_URL = '/media/'
 MEDIA_ROOT = '/var/www/unique/unique_website/media/'

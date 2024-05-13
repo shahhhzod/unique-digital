@@ -446,9 +446,19 @@ body {
         display: block;
     }
 
-    .team-section .image-block img {
-      width: 120px;
-      height: 120px;
+    .team-section .image-block {
+      display: none;
+    }
+
+    .image-block-mobile {
+      display: block !important;
+    }
+
+    .image-block-mobile img {
+      display: block;
+      margin-left: auto;
+      width: 100%;
+      margin-right: auto 
     }
    
     .navbar {
@@ -659,11 +669,10 @@ body {
 @media (max-width: 768px) {
   .content-hero p {
     font-size: 20px;
-    margin-top: 50px;
   }
 
   .content-hero h1 {
-    font-size: 50px;
+    font-size: 32px;
   }
 
   .button_hero {
@@ -677,6 +686,7 @@ body {
 
   .main-hero {
     border-radius: 0;
+    min-height: 80vh !important;
   }
 
   .main-hero::after {
@@ -691,15 +701,29 @@ body {
 }
 
 
+@media(max-width: 1150px) {
+  .container {max-width: 100%; padding: 0 15px;}
+}
+
+
 /* Медиа-запросы для мобильных устройств */
 @media (max-width: 768px) {
+  .team-section {
+    margin-top: 15px !important;
+  }
+
+
+  .stats-section {
+    margin-top: 0px !important;
+  }
+
   .team-section .subtitle {
     font-size: 1.25rem; /* Уменьшите размер шрифта для мобильных устройств */
     /* Дополнительные стили для мобильных устройств, если необходимо */
   }
 
   .team-section .title {
-    font-size: 1.05rem; /* Уменьшите размер шрифта для мобильных устройств */
+    font-size: 1.05rem !important; /* Уменьшите размер шрифта для мобильных устройств */
     /* Дополнительные стили для мобильных устройств, если необходимо */
   }
 
@@ -724,16 +748,7 @@ body {
     padding: 50px;
   }
 
-  .unique-team-block {
-    background-color: #292929; /* Цвет фона блока */
-    border-radius: 20px; /* Скругление углов блока */
-    height: 720px; /* Высота блока равна высоте image-block */
-    position: relative; /* Для позиционирования псевдоэлемента */
-    /* Другие стили */
-    width: auto;
-    box-shadow: 0 0 10px rgba(255, 255, 255, 0); /* Изначальное состояние тени */
-    transition: box-shadow 0.5s ease-in-out; /* Плавное изменение тени */
-}
+
 
 .unique-team-block::before {
     content: '';
@@ -773,7 +788,12 @@ body {
     white-space: nowrap; /* Убеждаемся, что текст останется в одну строку */
 }
 
+.image-block-mobile {
+  display: none;
+}
+
   .image-block {
+    display: block;
     padding: 0; /* Убираем паддинги, если они были */
   }
   
@@ -869,6 +889,7 @@ body {
     }
 
     .services-section {
+        margin-bottom: 0px !important;
         text-align: center;
     }
   }
@@ -1074,22 +1095,6 @@ body {
     text-transform: uppercase;
   }
 
-  @media (max-width: 1200px) {
-    /* Стили для больших и маленьких карточек при меньшей ширине экрана */
-    .big-card,
-    .small-card {
-      flex-basis: 100%; /* На маленьких экранах карточки занимают всю ширину строки */
-    }
-  }
-
-  @media (max-width: 991px) {
-    /* Для маленьких экранов устанавливаем базис на 100% для всех элементов */
-    .big-card,
-    .small-card {
-      flex: 0 0 100%;
-    }
-  }
-
 
   .reviews {
     margin-top: 260px;
@@ -1214,6 +1219,10 @@ body {
   @media (max-width: 768px) {
     .decorative-image {
      display: none;
+    }
+
+    .services-section  {
+      margin-bottom:  0px !important;
     }
   }
 
@@ -1377,10 +1386,39 @@ body {
       font-size: 1.5em; /* Меньше размер шрифта на мобильных устройствах */
     }
 
+    .cooperation {
+      height: 370px !important;
+      margin-top: 30px !important;
+      margin-bottom: 100px !important;
+    }
+
+    .reviews {
+      margin-top: 130px !important;
+    }
+
+    .partner {
+      margin-top: 100px !important;
+    } 
+
+    .faq {
+      margin-top: 115px !important;
+      margin-bottom: 120px !important;
+    }  
+
+    .reviews h2 {
+      font-size: 32px !important;
+    } 
+
+    .cooperation-hero h2 {
+      margin-left: 0px !important;
+      text-align: center;
+    }
+
     .cooperation-hero .display-4 {
-      text-stroke: none;
+      font-size: 28px !important;
       color: #FFD5A4;
-      font-size: 20px;
+      text-stroke: none !important;
+      -webkit-text-stroke: #FFD5A4;
     } 
   }
 
@@ -1572,7 +1610,9 @@ body {
   }
 
   .contact-section .display-4 {
-    font-size: 60px;
+    font-size: 34px;
+    color: #FFD5A4;
+    -webkit-text-stroke: 0px #FFD5A4;
   }
 
   .contact-section img {
@@ -1586,11 +1626,15 @@ body {
 
 @media (max-width: 768px) {
   .services-header {
-    font-size: 24px;
+    font-size: 27px;
+  }
+
+  .services-decorative-line {
+    margin-top: 16px !important;
   }
 
   .services-subheader {
-    font-size: 18px;
+    font-size: 22px !important;
   }
 
   .faq-header {
@@ -1598,7 +1642,7 @@ body {
   }
 
   .faq-body {
-    font-size: 16px;
+    font-size: 26px;
   }
 
   .faq_symbol img {
@@ -1614,7 +1658,12 @@ body {
   }
 
   .blockquote p {
-    font-size: 16px;
+    font-size: 17px;
+    line-height: 36px;
+  }
+
+  .reviews strong {
+    font-size: 14px;
   }
 
   .testimonial-author-image {
@@ -1625,7 +1674,7 @@ body {
   }
 
   .who_reviev {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .control-button {
@@ -1633,6 +1682,8 @@ body {
   }
 
   .control-button button {
+    width: 40px;
+    height: 40px;
     font-size: 20px;
     padding: 5px;
   }

@@ -30,6 +30,11 @@
         <div class="col-md-6 image-block">
           <img src="{% static 'images/team.svg' %}" alt="team">
         </div>
+        <div class="col-md-6 image-block-mobile text-center">
+          <p>
+            <img src="{% static 'images/team-mobile.svg' %}" alt="team">
+          </p>
+        </div>
         <div class="col-md-6 content-block">
           <div class="subtitle">немного о нас</div>
           <div class="title">МОЛОДАЯ И ТАЛАНТЛИВАЯ КОМАНДА, ВЛЮБЛЕННАЯ В СВОЁ ДЕЛО.</div>
@@ -44,7 +49,8 @@
 
 <!-- Number Stats -->
 
-<div class="container stats-section">
+<div class="stats-section">
+  <div class="container">
     <div class="row">
       <div class="col stat-item">
         <div class="stat-number">30+</div>
@@ -60,10 +66,12 @@
       </div>
     </div>
   </div>
+  </div>
 
 <!-- Title Block -->
   
-<div class="container services-section">
+<div class="services-section">
+  <div class="container">
     <div class="row">
       <div class="col">
         <div class="services-header">наши услуги</div>
@@ -71,6 +79,7 @@
         <div class="services-subheader">Что мы предлагаем?</div>
       </div>
     </div>
+  </div>
   </div>
 
 
@@ -178,7 +187,8 @@
   </section>  
 
 <!-- Title Block -->
-<div class="container services-section">
+<div class="services-section">
+  <div class="container">
     <div class="row">
       <div class="col">
         <div class="services-header">ПОРТФОЛИО</div>
@@ -186,6 +196,7 @@
         <div class="services-subheader">Наши недавние проекты</div>
       </div>
     </div>
+  </div>
   </div>
 </div>
 
@@ -234,7 +245,7 @@
                 <div class="decoration-line"></div>
                 <footer class="blockquote-footer-carousel d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center">
-      <img src="assets/images/reviews/warshan.webp" alt="Варшан Каххоров" class="testimonial-author-image me-3">
+      <img src="{% static 'images/partner/Varshan.png' %}" alt="Варшан Каххоров" class="testimonial-author-image me-3">
       <div>
         <div><strong>Варшан Каххоров</strong></div>
         <div class="who_reviev">руководитель Washan store</div>
@@ -257,16 +268,15 @@
             <div class="carousel-item">
               <div class="blockquote">
                 <p class="mb-0">
-                Агентство, которое разработало для нас айдентику, профессионалы своего дела. Они создали для нас уникальный бренд, который помог нам выделиться на рынке. 
-                Мы ценим их профессионализм и рекомендуем агентство всем, кто ищет надежного партнера для своих проектов.
+                  Я был приятно удивлен профессионализмом и инновационным подходом агентства Unique в разработке нашего сайта. Их команда проявила высокий уровень компетенции, оперативно реагировала на наши требования и предложения, Мы довольны результатом и благодарны агентству за качественно выполненную работу.
                 </p>
                 <div class="decoration-line"></div>
                 <footer class="blockquote-footer-carousel d-flex align-items-center justify-content-between">
     <div class="d-flex align-items-center">
-      <img src="https://hips.hearstapps.com/hmg-prod/images/gettyimages-1229892983-square.jpg" alt="Варшан Каххоров" class="testimonial-author-image me-3">
+      <img src="{% static 'images/partner/Haytham.jpg' %}" alt="Хэйтем Александр" class="testimonial-author-image me-3">
       <div>
-        <div><strong>Илон Маск</strong></div>
-        <div class="who_reviev">CEO Tesla</div>
+        <div><strong>Хэйтем Александр</strong></div>
+        <div class="who_reviev">CEO HC Media</div>
       </div>
     </div>
     <div class="control-button d-flex">
@@ -376,7 +386,7 @@
             <div class="accordion-item">
               <h2 class="accordion-header" id="headingThree">
                 <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                  Какие основные этапы разработки сайта?
+                  Какие этапы разработки сайта?
                 </button>
               </h2>
               <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#faqAccordion">
