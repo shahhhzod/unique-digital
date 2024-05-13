@@ -21,6 +21,7 @@ DEBUG = False
 
 ALLOWED_HOSTS = ['unique-agency.tj']
 
+
 # Application definition
 
 INSTALLED_APPS = [
