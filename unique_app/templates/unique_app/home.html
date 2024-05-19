@@ -8,7 +8,7 @@
 {% block content %}
 
 <!-- Main Hero -->
-
+<div id="content">
 <div class="container-fluid p-0">
     <div class="main-hero">
       <!-- Текст и кнопки -->
@@ -21,6 +21,7 @@
       <!-- Генерируем квадратики с помощью JavaScript -->
     </div>
   </div>
+</div>
 
 
   <!-- About US -->
@@ -420,5 +421,5 @@
       <h1 class="display-4 mt-4"><a class="display-4 text-decoration-none" href="{% url 'inquiry' %}">Напишите нам <img src="{% static 'images/icons/arrow_contact.svg' %}" alt=""></a></h1>
       <div class="contact-divider mx-auto mt-3"></div>
     </div>
-  </section>  
+  </section>
 {% endblock %}
