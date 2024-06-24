@@ -2,12 +2,26 @@ from django.shortcuts import get_object_or_404, render, redirect
 from .models import Post, Category, PortfolioItem
 from .forms import InquiryForm
 from django.http import HttpResponse
-from django.conf import settings
+from django.http import JsonResponse
 from decouple import config
-from django.utils.translation import gettext as _
+from django.utils.translation import activate
+from django.template.loader import render_to_string
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 import requests
+import json
 
+def set_language(request):
+    try:
+        if request.method == 'POST':
+            data = json.loads(request.body)
+            language = data.get('language')
+            if language:
+                activate(language)
+                content = render_to_string('unique_app/content.html')
+                return JsonResponse({'content': content})
+        return JsonResponse({'error': 'Invalid request'}, status=400)
+    except Exception as e:
+        return JsonResponse({'error': str(e)}, status=500)
 
 def my_view(request):
     output = _("Welcome to my site.")

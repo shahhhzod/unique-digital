@@ -2,7 +2,7 @@ from django.contrib import admin
 from django.conf.urls.static import static
 from django.conf import settings
 from django.urls import path, include
-from unique_app.views import blog_index, post_detail, home, services, post_list_by_category, inquiry_view, web_development, smm_services, seo_services, design_services, portfolio_list,  portfolio_detail, success_view, web_analytics, calculator_web, targeting_page
+from unique_app.views import blog_index, post_detail, home, services, post_list_by_category, inquiry_view, web_development, smm_services, seo_services, design_services, portfolio_list,  portfolio_detail, success_view, web_analytics, calculator_web, targeting_page, set_language
 
 urlpatterns = [
     path('', home, name='home'),
@@ -24,6 +24,7 @@ urlpatterns = [
     path('inquiry/', inquiry_view, name='inquiry'),
     path('success/', success_view, name='success_url'),  # Убедитесь, что имя URL соответствует
 ]
+
 
 if settings.DEBUG:
     urlpatterns += static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

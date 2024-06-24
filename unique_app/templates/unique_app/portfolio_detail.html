@@ -5,11 +5,18 @@
 {% block content %}
 <section class="post_detail">
     <div class="container mt-5">
-        <div class="photo text-center">
-            <img src="{{ item.image.url }}" alt="{{ item.title }}" class="w-50">
+        <div class="row justify-content-center">
+        <div class="col-lg-8">
+        <article class="post-detail text-white">
+        <img src="{{ item.image.url }}" alt="{{ item.title }}" class="img-fluid rounded text-center">
+        <h1 class="mt-4">{{ item.title }}</h1>
+        <div class="post-content mb-4">{{ item.description }}</div><br><br><br>
+
+        <div class="sharethis-inline-reaction-buttons"></div>
+        </article>
         </div>
-        <h1 class="text-white text-center mt-3">{{ item.title }}</h1>
-        <p class="text-white text-left mt-3">{{ item.description }}</p><br><br><br>
+        </div>
+        </div>
     </div>
 </section>
 {% endblock %}
